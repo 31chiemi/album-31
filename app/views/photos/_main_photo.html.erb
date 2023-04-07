@@ -1,0 +1,19 @@
+<div class="photo-header">
+  <%# if user_signed_in? %>
+    <%# <div class="nav"> %>
+      <%#= link_to "ログアウト", destroy_user_session_path, method: :delete,  class: :nav__logout %>
+    <%# </div>%>
+    <%# // ↑ログインしているときは上記を表示 %>
+  <%# else %>
+    <div class="nav">
+      <%= link_to "ログイン", root_path, class: :nav__btn %>
+      <%= link_to "新規登録", root_path, class: :nav__btn %>
+    </div>
+  <%# end %>
+</div>
+
+<div class="messages">
+</div>
+
+<div class="form">
+</div>
