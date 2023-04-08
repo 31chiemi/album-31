@@ -10,23 +10,27 @@
 
 ### Association
 
-- has_many :photos
-- has_many :comments
 
-## photos テーブル
+
+## pages テーブル
 
 | Column     | Type       | Options                        |
 | -----------| ---------- | ------------------------------ |
-| number_id  | integer    | null: false                    |
-| user       | references | null: false, foreign_key: true |
+| name       | string     | null: false                    |
+| number     | integer    | null: false                    |
+
 
 ### Association
 
-- belongs_to :user
+- has_many :photos
 
-## comments テーブル
+## photos テーブル
 
-| Column    | Type       | Options                        |
-| ----------| ---------- | ------------------------------ |
-| content   | text       | null: false                    |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| photonumber | integer    | null: false                    |
+| page        | references | null: false, foreign_key: true |
 
+### Association
+
+- belongs_to :album
